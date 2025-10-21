@@ -1,13 +1,13 @@
-# 🌾 Agriculture Data Modeling — Internship Project
+# Agriculture Data Modeling — Internship Project
 
-## 📍 Overview
+## Overview
 This project was conducted under the **Regional Integrated Multi-Hazard Early Warning System (RIMES)**.  
 The main goal was to build **data-driven models** to support agricultural decision-making in Nepal.  
 The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and focused on early warning and smart resource optimization.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 - Develop an **Early Warning System** for major crops using weather and soil data.  
 - Predict **heat stress** and **cold stress** events based on climatic variables.  
 - Estimate **disease risk** for Rice Blast, Bacterial Leaf Blight, and Sheath Blight.  
@@ -16,7 +16,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 
 ---
 
-## 🧩 Datasets Used
+## Datasets Used
 
 | Source | Description | Parameters |
 |---------|--------------|-------------|
@@ -24,14 +24,14 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 | **NARC (Soil)** | Soil property dataset from Nepal | `pH`, `organic_matter`, `N`, `P`, `K`, `boron`, `zinc`, `texture`, `crop` |
 | **Temporal Coverage** | 2021–2025 (merged for continuity) | — |
 
-⚠️ *Soil data sampling dates were estimated based on NARC knowledge and data collection timelines.*
+    *Soil data sampling dates were estimated based on NARC knowledge and data collection timelines.*
 
 ---
 
-## ⚙️ Modeling Components
+## Modeling Components
 
 <details>
-<summary><b>🌡️ Heat Stress Prediction</b></summary>
+<summary><b Heat Stress Prediction</b></summary>
 
 - **Target:** Binary label (`heat_proxy`) indicating heat stress conditions.  
 - **Models:** Random Forest, Gradient Boosting, Extra Trees.  
@@ -43,7 +43,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 </details>
 
 <details>
-<summary><b>🌾 Disease Risk Prediction</b></summary>
+<summary><b>Disease Risk Prediction</b></summary>
 
 - **Targets:** Rice Blast, Bacterial Leaf Blight, Sheath Blight.  
 - **Models Tested:** Random Forest, XGBoost, LightGBM, Gradient Boosting.  
@@ -55,7 +55,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 </details>
 
 <details>
-<summary><b>🧪 Fertilizer Optimization (RL PPO)</b></summary>
+<summary><b>Fertilizer Optimization (RL PPO)</b></summary>
 
 - **Algorithm:** Proximal Policy Optimization (PPO).  
 - **State:** Soil features (pH, N, P, K, texture) + crop & growth stage.  
@@ -67,7 +67,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 
 ---
 
-## 📉 Key Findings
+## Key Findings
 - **Temperature** and **cumulative rainfall** strongly influence heat stress.  
 - **Rainfall anomalies** and **temperature** drive disease occurrence.  
 - **RL PPO** offers superior adaptability compared to regression for dose optimization.  
@@ -75,7 +75,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 1. **Temporal Uncertainty** – Exact soil data sampling dates unknown (merged 2021–2025).  
 2. **Weather Granularity** – ECMWF data may not reflect microclimatic farm variations.  
 3. **Disease Coverage** – Only three rice diseases modeled so far.  
@@ -84,7 +84,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 
 ---
 
-## 🧠 Learnings
+## Learnings
 - Proper **feature scaling**, **encoding**, and **missing value handling** are vital for stable models.  
 - **Cross-validation** and **SMOTE** improve generalization and reduce overfitting.  
 - Reinforcement Learning (**PPO**) enables **adaptive, real-time fertilizer optimization**.  
@@ -92,7 +92,7 @@ The internship lasted **8 weeks**, supervised by **Mr. Sanim Raj Shakya**, and f
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 ```bash
 RIMES/
 │
@@ -112,3 +112,5 @@ RIMES/
 ├── models/
 │
 └── .gitignore
+
+Please note that the dataset/ and models/ folders have been omitted from this submission due to their large size and confidentiality considerations
